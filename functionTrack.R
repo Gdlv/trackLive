@@ -4,7 +4,6 @@ previousRec<-function(){
   my_stream <- stream() # 0 will start your default webcam in general. 
   done<-F
   a<-readNext(my_stream)
-  
   while (!done) {
     a<-readNext(my_stream,)
     message("the webcam is in another window")
