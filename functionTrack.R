@@ -93,6 +93,8 @@ startLiveTrack<-function (obj=stream(), outputFolder,threshold=145, polRvis=NULL
   release(obj)
   print(paste("images were taken at ",counter/duration," fps"))
   assign(x ="polygonR",value = polRvis,envir = .GlobalEnv)
+  assign(x ="dataR",value = d, envir = .GlobalEnv)
+  
 }
 
 
