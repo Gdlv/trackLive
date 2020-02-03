@@ -79,7 +79,9 @@ startLiveTrack<-function (obj=stream(), outputFolder,threshold=145, polRvis=NULL
     wx<-abs(idxy$mx-d$mx[(counter-1)])
     wy<-abs(idxy$my-d$my[(counter-1)])
     wxy<-wx*wy
-    idxy2<-idxy[which(wxy==min(wxy)),]
+    suppressWarnings(
+      idxy2<-idxy[which(wxy==min(wxy)),]
+    )
     
     d<-rbind(d,idxy2[,c(4,2,3)])
     counter <- counter + 1
