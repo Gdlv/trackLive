@@ -52,8 +52,9 @@ startLiveTrack<-function (obj=stream(), outputFolder,threshold=145, polRvis=NULL
   }
   if (!is.data.frame(polRvis[[1]])) {
     message("This is not a data frame with the coordinates. Please create the polygon.")
-    display(obj)
-    polRvis<-selectROI(obj)
+    img<-obj$readNext()
+    display(img)
+    polRvis<-selectROI(img)
     }
     
   counter <- 0
@@ -90,5 +91,4 @@ startLiveTrack<-function (obj=stream(), outputFolder,threshold=145, polRvis=NULL
   release(obj)
   print(paste("images were taken at ",counter/duration," fps"))
 }
-
 
