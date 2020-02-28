@@ -5,7 +5,7 @@ previousRec<-function(){
   done<-F
   a<-readNext(my_stream)
   while (!done) {
-    a<-readNext(my_stream,)
+    a<-readNext(my_stream)
     message("the webcam is in another window")
     drawText(a, "stop from R or RStudio", 50, 50, thickness = 2)
     display(a)
